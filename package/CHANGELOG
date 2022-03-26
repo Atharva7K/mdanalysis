@@ -15,11 +15,13 @@ The rules for this file:
 ------------------------------------------------------------------------------
 ??/??/?? IAlibay, BFedder, inomag, Agorfa, aya9aladdin, shudipto-amin, cbouy,
          HenokB, umak1106, tamandeeps, Mrqeoqqt, megosato, AnirG, rishu235,
-         mtiberti, manishsaini6421
+         mtiberti, manishsaini6421, Atharva7K
 
  * 2.2.0
 
 Fixes
+  * Fixed OpenMMParser not working when some or none of the elements are set
+    (Issue #3317, PR #3511)
   * Fixed encore.covariance.covariance_matrix not working when providing
     an external reference (Issue #3539, PR #3621)
   * Fixed LinearDensity not working with grouping='residues' or 'segments'
@@ -63,8 +65,6 @@ Deprecations
  * 2.1.0
 
 Fixes
-  * Fixed OpenMMParser not working when some or none of the elements are set
-    (Issue #3317, PR #3511)
   * Use uint64_t loop counters in C level distance functions to avoid overflow
     for large arrays (Issue #3512, PR #3513).
   * Prevents attempts to close an already closed NamedStream (Issue #3386)
