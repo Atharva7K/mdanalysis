@@ -57,12 +57,8 @@ class OpenMMPDBReaderBench(object):
     """
     parser = mda.converters.OpenMMParser.OpenMMTopologyParser
 
-    params = (CONECT, PDB)
-    param_names = ['filename']
+    def setup(self):
+        self.pdb = app.PDBFile(PDB)
 
-
-    def setup(self, filename):
-        self.pdb = app.PDBFile(filename)
-
-    def time_parser(self, filename):
+    def time_parser(self):
         u = mda.Universe(self.pdb)
